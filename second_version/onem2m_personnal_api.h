@@ -87,24 +87,74 @@ enum typeOfValue
     typedef struct sockaddr SOCKADDR;
 #endif
 
+/*	@description:
+ *	@param:
+ *	@param:
+ *	@return:
+*/ 
 int connexion(char * IP,int port);
 
+/*	@description:
+ *	@param:
+ *	@param:
+ *	@return:
+*/ 
 int closeConnexion(void);
 
+/*	@description:
+ *	@param:
+ *	@param:
+ *	@return:
+*/ 
 char * doRequest(char * header,char * body);
 
+/*	@description:
+ *	@param:
+ *	@param:
+ *	@return:
+*/ 
 SOCKET my_socket(void);
 
+/*	@description:
+ *	@param:
+ *	@param:
+ *	@return:
+*/ 
 SOCKET setMy_Socket(SOCKET soc);
 
+/*	@description:
+ *	@param:
+ *	@param:
+ *	@return:
+*/ 
 int driveClock(int time);
 
+/*	@description:
+ *	@param:
+ *	@param:
+ *	@return:
+*/ 
 int iAmConnected(void);
 
+/*	@description:
+ *	@param:
+ *	@param:
+ *	@return:
+*/ 
 struct json_header jsonToStruct(char * json);
 
+/*	@description:
+ *	@param:
+ *	@param:
+ *	@return:
+*/ 
 char * createHeader(char * cible,int type,int create);
 
+/*	@description:
+ *	@param:
+ *	@param:
+ *	@return:
+*/ 
 char * tblToJson(json_chaine * data);
 
 #endif

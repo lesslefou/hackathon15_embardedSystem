@@ -22,14 +22,40 @@ enum achievementType
 #include <stdlib.h>
 #include <time.h>
 
+
+/*	@description:
+ *	@param:
+ *	@param:
+ *	@return:
+*/ 
 typedef void PrintString(int,char *,char *);
 
+/*	@description:
+ *	@param:
+ *	@param:
+ *	@return:
+*/ 
 void my_log_function(int achievement,char * string,char * function);
 
+/*	@description:
+ *	@param:
+ *	@param:
+ *	@return:
+*/ 
 FILE * my_stream_log(FILE * stream);
 
+/*	@description:
+ *	@param:
+ *	@param:
+ *	@return:
+*/ 
 PrintString * default_log_function(PrintString printFonction);
 
+/*	@description:
+ *	@param:
+ *	@param:
+ *	@return:
+*/ 
 char * giveMeTimeInStr(time_t temps);
 
 #endif

@@ -70,16 +70,46 @@ typedef struct coord
 	char D;
 } coord;
 
+/*	@description:
+ *	@param:
+ *	@param:
+ *	@return:
+*/ 
 int convertSerialGpsToTwoCoord(char * string, coord * lat,coord * lon);
 
+/*	@description:
+ *	@param:
+ *	@param:
+ *	@return:
+*/ 
 int closeGPS();
 
+/*	@description:
+ *	@param:
+ *	@param:
+ *	@return:
+*/ 
 int initGPS(char * location);
 
+/*	@description:
+ *	@param:
+ *	@param:
+ *	@return:
+*/ 
 int streamGPS(int stream);
 
+/*	@description:
+ *	@param:
+ *	@param:
+ *	@return:
+*/ 
 char * getMessageFromGPS(char * buffer,int max);
 
+/*	@description:
+ *	@param:
+ *	@param:
+ *	@return:
+*/ 
 int sendMessageToGPS(char * string);
 
 #endif

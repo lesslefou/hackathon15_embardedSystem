@@ -116,6 +116,7 @@ char * doRequest(char * header,char * body)
 	static char server_reply[2000];
 
 	sprintf(server_reply,"%s%i\r\n\r\n{%s}\r\n\r\n",header,strlen(body)+4,body);
+	free(body);
 	my_log_function(INFO,server_reply,"doRequest");
 	if (send(my_socket(), server_reply, strlen(server_reply),MSG_DONTWAIT) < 0)
 	{
@@ -190,15 +191,7 @@ SOCKET setMy_Socket(SOCKET soc)
 	}
 	return socket;
 }
-/*
-typedef struct json_chaine
-{
-	char * properti_name;
-	void * value;
-	int typeOfValue;
-	int nbr;
-} json_chaine;
-*/
+
 char * tblToJson(json_chaine * data)
 {
 	char * retour = malloc(sizeof(char)*2000);
