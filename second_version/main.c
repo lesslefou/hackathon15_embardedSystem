@@ -123,6 +123,7 @@ void * getMyGPS(void * arg)
 void * grenade(void * arg)
 {
 	gpio my_grenade = gpio_init(26);
+	gpio_set_direction_out(my_grenade);
 	while(lacherGrenade == 0 && dontStopMeSow == 0);
 	gpio_set_value(my_grenade,HIGH);
 	while(dontStopMeSow == 0);
