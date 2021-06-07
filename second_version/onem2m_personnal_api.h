@@ -58,6 +58,7 @@ enum typeOfValue
 #define DEFAULT_CSE_PORT 8080
 #define DEFAULT_USER_AGENT "ACME 0.7.3"
 #define DEFAULT_X_M2M_ORIGIN "CAdmin"
+#define DEFAULT_X_M2M_ORIGIN_CREATE "CAdmin:CAdmin"
 #define DEFAULT_X_M2M_RVI "3"
 #define DEFAULT_HTTP_VERSION "HTTP/1.1"
 #define CONTENT_TYPE "application/json"
