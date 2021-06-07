@@ -152,7 +152,7 @@ char * createHeader(char * cible,int type,int create)
 	switch(type)
 	{
 		case GET: Type = "GET"; break;
-		case CREATE: Type = "POST"; sprintf(Create,"%i",create); strcat(origine,":");strcat(origine,"forestDrone"); break;
+		case CREATE: Type = "POST"; sprintf(Create,"%i",create); strcpy(origine,DEFAULT_X_M2M_ORIGIN_CREATE); break;
 		case UPDATE: Type = "PUT"; break;
 		case DELETE: Type = "DELETE"; break;
 		default: Type = "GET"; break;
@@ -166,7 +166,7 @@ Accept: %s\r\n\
 X-M2M-Origin: %s\r\n\
 X-M2M-RI: %i\r\n\
 X-M2M-RVI: %s\r\n\
-Content-Length:",Type,cible,DEFAULT_HTTP_VERSION,DEFAULT_USER_AGENT,CONTENT_TYPE,Create,CONTENT_TYPE,DEFAULT_X_M2M_ORIGIN,requestNumber,DEFAULT_X_M2M_RVI);
+Content-Length:",Type,cible,DEFAULT_HTTP_VERSION,DEFAULT_USER_AGENT,CONTENT_TYPE,Create,CONTENT_TYPE,origine,requestNumber,DEFAULT_X_M2M_RVI);
 	 requestNumber++;
 	
 	return message;
